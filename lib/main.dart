@@ -8,6 +8,12 @@ import 'package:flutter/services.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
+@pragma("vm:entry-point")
+void nativeLoad() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MyApp());
+}
+
 void main() {
   runApp(MyApp());
 }
